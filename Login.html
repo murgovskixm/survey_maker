@@ -15,34 +15,11 @@
     <link href="boostrap4-3/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../css/floating-labels.css" rel="stylesheet">
-    <link href="../css/navbar.css" rel="stylesheet">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">Survey</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExample07">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="../make-a-survey.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-
-          </ul>
-          <form class="form-inline my-2 my-md-0">
-            <h6 style="color: white">Don't have an account?</h6>"    "
-            <a id="button1" href="register.html" class="btn btn-secondary" role="button">Register</a>
-          </form>
-            
-        </div>
-      </div>
-    </nav>
+    <link href="css/floating-labels.css" rel="stylesheet">
   </head>
 
   <body>      
-    <form class="form-signin" action="auth" method="post" style="padding-top: 200px">
+    <form class="form-signin" method="post" action="others/make-a-survey2.html">
       <div class="text-center mb-4">
         <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Login to FINKI Survey</h1>
@@ -65,6 +42,8 @@
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <label for="register" style="padding-top: 20px">Don't have an account?</label>
+      <a href="others/register.html" class="btn btn-lg btn-secondary btn-block" id="register">Sign up</a>
     </form>
   </body>
 
