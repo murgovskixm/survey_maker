@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+
+    <title>Finki Survey</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="boostrap4-3/css/bootstrap.min.css" rel="stylesheet">
+    <style >
+        # {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        #button1{
+            margin-left: 5px
+        }
+        
+    </style>
+    
+  </head>
+
+  <body class="bg-light">
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Survey</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../make-a-survey.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+          
+          </form>
+            
+        </div>
+      </div>
+    </nav>
+      
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Custom Survey</h1>
+          <p class="lead text-muted">Make your own custom surveys.</p>
+          <p class="text-muted">
+              Changed your mind?   
+          </p>
+            <a href="../make-a-survey.html" class="btn btn-secondary my-2">Go back</a>
+        </div>
+      </section>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12 order-md-1">
+          <h3 class="mb-3">Type in your question here</h3>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+            </div>
+
+            <div class="mb-3">
+              <label for="question">Question Title</label>
+              <input type="text" class="form-control" id="question" placeholder="Type in your question here">
+              <div class="invalid-feedback">
+                Please enter a valid question.
+              </div>
+            </div>
+              <button class="btn btn-primary btn-lg btn-block" type="button" onclick="myFunction()">Add Question</button>
+              <br>
+              <h3 class="mb-3">Your Questions</h3>
+              <div id="insert" class="mb-3">
+              
+            </div>
+              
+            
+              
+              <br>
+              <br>
+            
+          </form>
+        </div>
+      </div>
+        <a href="Saved.html" class="btn btn-info btn-lg btn-block" role="button">Save Survey</a>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2018-2019 Finki Survey</p>
+        <ul class="list-inline">
+
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Javascript -->
+    <script type = "text/javascript">        
+        function myFunction() {
+            var value = document.getElementById("question").value;
+            
+            if(value == ""){
+                window.alert("Please type in a question. Otherwise your field will be empty! ");
+            }
+            
+            else {
+                var para = document.createElement("P"); 
+                var para1 = document.createElement("input");
+                var para2 = document.createElement("button");
+                var para3 = document.createElement("br");
+
+                para1.className = "form-control"
+                para2.innerHTML = "Remove Question"
+                para2.className = "btn btn-secondary btn-lg btn-block"
+                para2.onclick="deletethis()"
+
+                para.innerHTML = document.getElementById("question").value;
+                document.getElementById("insert").appendChild(para);
+                document.getElementById("insert").appendChild(para1);
+                document.getElementById("insert").appendChild(para3);
+                document.getElementById("insert").appendChild(para2);
+            }           
+        }
+    </script>
+  </body>
+</html>
